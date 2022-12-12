@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="12dp"
     android:layout_margin="10dp"
+    android:id="@+id/CVObjetoObra"
     >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

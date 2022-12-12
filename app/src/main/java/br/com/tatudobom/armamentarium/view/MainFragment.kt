@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import br.com.tatudobom.armamentarium.R
 import br.com.tatudobom.armamentarium.databinding.FragmentMainBinding
 import com.androidtasks.mainactivity.util.navTo
@@ -23,6 +24,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
 
 
+
         binding.btnLogin.setOnClickListener{
             val email = binding.ETEmailAddress.text.toString()
             val password = binding.ETPassword.text.toString()
@@ -36,7 +38,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private fun funSignIn(email: String, password: String) {
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
             if(it.isSuccessful){
-                navTo(R.id.constructions)
+                findNavController().navigate(R.id.constructions)
             }
             else{
                 Toast.makeText(context,"error autentication", Toast.LENGTH_SHORT).show()

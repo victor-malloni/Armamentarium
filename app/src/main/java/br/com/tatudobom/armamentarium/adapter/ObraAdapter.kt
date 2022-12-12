@@ -1,14 +1,18 @@
 package br.com.tatudobom.armamentarium.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.tatudobom.armamentarium.R
 import br.com.tatudobom.armamentarium.model.Obra
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class ObraAdapter(private val items: List<Obra>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+/*class ObraAdapter(private val items: List<Obra>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ObraViewHolder(
@@ -45,45 +49,56 @@ class ObraAdapter(private val items: List<Obra>) : RecyclerView.Adapter<Recycler
 
     }
 
+}*/
+
+
+class ObraAdapter(
+    private val context: Context,
+    val listener: ObraClickListener
+) : RecyclerView.Adapter<ObraAdapter.ObraViewHolder>() {
+
+    class ObraViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        var obrasLayout = itemView.findViewById<CardView>(R.id.CVObjetoObra)
+        var constName = itemView.findViewById<TextView>(R.id.TVObra)
+        var constEndereco = itemView.findViewById<TextView>(R.id.TVEndereco)
+        var quantityTotal = itemView.findViewById<TextView>(R.id.TVItemQuantidade)
+    }
+
+    private val ObraLista = ArrayList<Obra>()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ObraViewHolder {
+        return ObraViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
+        )
+    }
+
+    override fun onBindViewHolder(holder: ObraViewHolder, position: Int) {
+        val currentObra = ObraLista[position]
+        holder.constName.text = currentObra.nomeObra
+        holder.constEndereco.text = currentObra.endereco
+        holder.quantityTotal.text = currentObra.quantidadeFerramentas.toString()
+
+        holder.obrasLayout.setOnClickListener {
+            listener.onItemClicked(ObraLista[holder.adapterPosition])
+        }
+        holder.obrasLayout.setOnClickListener {
+            listener.onLongItemClicked(ObraLista[holder.adapterPosition],holder.obrasLayout)
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return ObraLista.size
+    }
+
+    interface ObraClickListener {
+        fun onItemClicked(obra: Obra)
+
+        fun onLongItemClicked(obra: Obra, cardView: CardView)
+
+    }
+
+
 }
 
-//class ObraAdapter(
-//    private val context: Context,
-//    val listener: ObraClickListener
-//) : RecyclerView.Adapter<ObraAdapter.ObraViewHolder>() {
-//    class ObraViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//
-//        var constName = itemView.findViewById<EditText>(R.id.ETConstName)
-//        var constEndereco = itemView.findViewById<EditText>(R.id.ETConstEndereco)
-//        var QuantitySerra = itemView.findViewById<EditText>(R.id.ETQuantitySerra)
-//        var QuantityChave = itemView.findViewById<EditText>(R.id.ETQuantityChave)
-//        var QuantityMartelo = itemView.findViewById<EditText>(R.id.ETQuantityMartelo)
-//
-//    }
-//
-//    private val ObraLista = ArrayList<Obra>()
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ObraViewHolder {
-//        return ObraViewHolder(
-//            LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
-//        )
-//    }
-//
-//    override fun onBindViewHolder(holder: ObraViewHolder, position: Int) {
-//        val currentObra = ObraLista[position]
-//        holder.constName.setText(currentObra.nomeObra)
-//        holder.constEndereco.setText(currentObra.endereco)
-//        currentObra.serraTicoTico?.let { holder.QuantitySerra.setText(it) }
-//        currentObra.chaveDeFenda?.let { holder.QuantityChave.setText(it) }
-//        currentObra.marteloDeUnha?.let { holder.QuantityMartelo.setText(it) }
-//    }
-//
-//    override fun getItemCount(): Int {
-//        return ObraLista.size
-//    }
-//
-//}
-//
-//interface ObraClickListener {
 
-//}

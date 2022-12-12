@@ -30,6 +30,7 @@ class Constructions : Fragment(R.layout.fragment_constructions) {
 
     private fun initRecyclerView() {
 
+
         RecyclerObra.layoutManager = LinearLayoutManager(context)
         RecyclerObra.adapter = this.obraAdapter
 
