@@ -116,8 +116,6 @@
             app:layout_constraintTop_toBottomOf="@+id/TVserraTicoTicoQuantidade" />
 
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
