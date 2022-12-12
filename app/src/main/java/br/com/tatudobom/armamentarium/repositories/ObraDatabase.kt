@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import br.com.tatudobom.armamentarium.model.Obra
 import br.com.tatudobom.armamentarium.util.DATABASE_NAME
 
-@Database(entities = arrayOf(Obra::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Obra::class), version = 3, exportSchema = false)
 abstract class ObraDatabase : RoomDatabase() {
     abstract fun getObraDao(): ObraDao
 
@@ -20,7 +20,7 @@ abstract class ObraDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ObraDatabase::class.java, DATABASE_NAME
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 instance
             }
