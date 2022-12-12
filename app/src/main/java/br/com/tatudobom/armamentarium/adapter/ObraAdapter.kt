@@ -83,7 +83,7 @@ class ObraAdapter(
         val currentObra = ObraLista[position]
         holder.constName.text = currentObra.nomeObra
         holder.constEndereco.text = currentObra.endereco
-        holder.quantityTotal.text = currentObra.quantidadeFerramentas.toString()
+        //holder.quantityTotal.text = currentObra.quantidadeFerramentas.toString()
 
         holder.obrasLayout.setOnClickListener {
             listener.onItemClicked(ObraLista[holder.adapterPosition])

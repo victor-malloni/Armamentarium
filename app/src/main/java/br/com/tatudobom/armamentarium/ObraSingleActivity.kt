@@ -24,7 +24,7 @@ class ObraSingleActivity : AppCompatActivity() {
             binding.tvEndereco.setText(oldObra.endereco)
             //Bellow to retrieve data from my TextView on MainActivity see more on NoteAdapter
             binding.TVConstDetailName.setText(oldObra.nomeObra)
-            binding.tvRANDOM.setText(oldObra.quantidadeFerramentas)
+            //binding.tvRANDOM.setText(oldObra.quantidadeFerramentas)
 
             isUpdateBoolean = true
         }
