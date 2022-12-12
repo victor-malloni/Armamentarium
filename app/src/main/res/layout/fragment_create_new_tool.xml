@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarelo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Armamentarium"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_baseline_settings"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constructions"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="New Tool"
+            android:textSize="30dp"
+            android:textColor="@color/amarelo"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_imput"
+            android:drawableStart="@drawable/ic_email"
+            android:ems="10"
+            android:hint="Tool Name"
+            android:textColorHint="@color/grey"
+            android:inputType="text"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:textColor="@android:color/black"
+            app:passwordToggleEnabled="true"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_imput"
+            android:drawableStart="@drawable/ic_email"
+            android:ems="10"
+            android:hint="Quantity"
+            android:textColorHint="@color/grey"
+            android:inputType="text"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:textColor="@android:color/black"
+            app:passwordToggleEnabled="true"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/btnCreateTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="create"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/amarelo"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/btnCancelTool"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="cancel"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/marrom"
+            android:layout_marginLeft="300dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "61532699434",
+    "project_id": "armamentarium-7e568",
+    "storage_bucket": "armamentarium-7e568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61532699434:android:e0871f279853dbb6b6bc53",
+        "android_client_info": {
+          "package_name": "br.com.tatudobom.armamentarium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61532699434-vo8a4rbu44gvb9tqf69aspnjos6ll9ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXvTwwWMwirz9zHps4SEsxxjmbcjRnrEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61532699434-vo8a4rbu44gvb9tqf69aspnjos6ll9ou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

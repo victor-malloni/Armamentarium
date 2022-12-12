@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:label="fragment_main"
+        android:name="br.com.tatudobom.armamentarium.view.MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_signup"
+            app:destination="@id/signup" />
+        <action
+            android:id="@+id/action_mainFragment_to_constructions"
+            app:destination="@id/constructions" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup"
+        android:name="br.com.tatudobom.armamentarium.view.Signup"
+        android:label="Signup"
+        tools:layout="@layout/fragment_signup"/>
+    <fragment
+        android:id="@+id/constructions"
+        android:name="br.com.tatudobom.armamentarium.view.Constructions"
+        android:label="fragment_constructions"
+        tools:layout="@layout/fragment_constructions" >
+        <action
+            android:id="@+id/action_constructions_to_newConstructions"
+            app:destination="@id/newConstructions" />
+    </fragment>
+    <fragment
+        android:id="@+id/newConstructions"
+        android:name="br.com.tatudobom.armamentarium.view.NewConstructions"
+        android:label="fragment_new_constructions"
+        tools:layout="@layout/fragment_new_constructions" >
+        <action
+            android:id="@+id/action_newConstructions_to_constructions"
+            app:destination="@id/constructions" />
+        <action
+            android:id="@+id/action_newConstructions_to_createNewTool"
+            app:destination="@id/createNewTool" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewTool"
+        android:name="br.com.tatudobom.armamentarium.view.CreateNewTool"
+        android:label="fragment_create_new_tool"
+        tools:layout="@layout/fragment_create_new_tool" >
+        <action
+            android:id="@+id/action_createNewTool_to_newConstructions"
+            app:destination="@id/newConstructions" />
+    </fragment>
+
+</navigation>
