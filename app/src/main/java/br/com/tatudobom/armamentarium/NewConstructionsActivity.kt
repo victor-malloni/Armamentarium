@@ -39,15 +39,18 @@ class NewConstructionsActivity : AppCompatActivity() {
         binding.btnCheck.setOnClickListener {
             val nomeObra = binding.ETConstName.text.toString()
             val endereco = binding.ETConstEndereco.text.toString()
+            val quantidadeChaveDeFenda = binding.ETQuantityChave.text.toString()
+            val quantidadeSerraTicoTico = binding.ETQuantitySerra.text.toString()
+            val quantidadeMarteloDeUnha = binding.ETQuantityMartelo.text.toString()
 
             if (nomeObra.isNotEmpty() || endereco.isNotEmpty()) {
                 if (isUpdateBoolean) {
                     obra = Obra(
-                        oldObra.id, nomeObra, endereco
+                        oldObra.id, nomeObra, endereco, quantidadeMarteloDeUnha, quantidadeSerraTicoTico, quantidadeChaveDeFenda
                     )
                 } else {
                     obra = Obra(
-                        null, nomeObra, endereco
+                        null, nomeObra, endereco, quantidadeMarteloDeUnha, quantidadeSerraTicoTico, quantidadeChaveDeFenda
                     )
                 }
 

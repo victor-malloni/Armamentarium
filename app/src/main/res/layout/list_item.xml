@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CVObjetoObra"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="12dp"
     android:layout_margin="10dp"
-    android:id="@+id/CVObjetoObra"
-    >
+    android:elevation="12dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="160dp"
         android:background="@drawable/custom_imput"
         android:backgroundTint="@color/amarelo"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,22 +35,88 @@
             android:text="endereco"
             android:textColor="@color/black"
             android:textSize="10dp"
-            android:textStyle="italic"
+            android:textStyle="normal"
             app:layout_constraintLeft_toLeftOf="@+id/TVObra"
             app:layout_constraintTop_toBottomOf="@+id/TVObra" />
 
         <TextView
-            android:id="@+id/TVItemQuantidade"
+            android:id="@+id/TVmarteloDeUnha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:text="10 items"
-            android:textColor="@color/marrom"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="12dp"
+            android:text="Martelo de unha: "
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="@+id/TVObra"
+            app:layout_constraintTop_toBottomOf="@+id/TVEndereco" />
+
+        <TextView
+            android:id="@+id/TVserraTicoTico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Serra tico tico: "
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="@+id/TVObra"
+            app:layout_constraintTop_toBottomOf="@+id/TVmarteloDeUnha" />
+
+        <TextView
+            android:id="@+id/TVchaveDeFenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Chave de fenda: "
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="@+id/TVObra"
+            app:layout_constraintTop_toBottomOf="@+id/TVserraTicoTico" />
+
+
+        <TextView
+            android:id="@+id/TVmarteloDeUnhaQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:text="TVmarteloDeUnha"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="italic"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/TVEndereco" />
+
+        <TextView
+            android:id="@+id/TVserraTicoTicoQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:text="TVserraTicoTico"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="italic"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVmarteloDeUnhaQuantidade" />
+
+        <TextView
+            android:id="@+id/TVchaveDeFendaQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:text="TVchaveDeFenda"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="italic"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVserraTicoTicoQuantidade" />
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

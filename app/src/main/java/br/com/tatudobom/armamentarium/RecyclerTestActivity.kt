@@ -28,6 +28,7 @@ class RecyclerTestActivity : AppCompatActivity(), ObraAdapter.ObraClickListener 
                 val obra = result.data?.getSerializableExtra("obra") as? Obra
                 if (obra != null) {
                     //viewModel.updateObra(obra)
+                    //viewModel.updateObra(obra)
                 }
             }
         }
@@ -85,7 +86,7 @@ class RecyclerTestActivity : AppCompatActivity(), ObraAdapter.ObraClickListener 
 
         val intent = Intent(this@RecyclerTestActivity, ObraSingleActivity::class.java)
         intent.putExtra("currentObra", obra)
-        updateObra.launch(intent)
+        //updateObra.launch(intent)
 
 
     }

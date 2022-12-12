@@ -66,7 +66,10 @@ class ObraAdapter(
         var obrasLayout = itemView.findViewById<CardView>(R.id.CVObjetoObra)
         var constName = itemView.findViewById<TextView>(R.id.TVObra)
         var constEndereco = itemView.findViewById<TextView>(R.id.TVEndereco)
-        var quantityTotal = itemView.findViewById<TextView>(R.id.TVItemQuantidade)
+        val quantidadeChaveDeFenda = itemView.findViewById<TextView>(R.id.TVchaveDeFendaQuantidade)
+        val quantidadeSerraTicoTico = itemView.findViewById<TextView>(R.id.TVserraTicoTicoQuantidade)
+        val quantidadeMarteloDeUnha = itemView.findViewById<TextView>(R.id.TVmarteloDeUnhaQuantidade)
+
     }
 
     private val ObraLista = ArrayList<Obra>()
@@ -83,6 +86,9 @@ class ObraAdapter(
         val currentObra = ObraLista[position]
         holder.constName.text = currentObra.nomeObra
         holder.constEndereco.text = currentObra.endereco
+        holder.quantidadeChaveDeFenda.text = currentObra.chaveDeFenda
+        holder.quantidadeSerraTicoTico.text = currentObra.serraTicoTico
+        holder.quantidadeMarteloDeUnha.text = currentObra.marteloDeUnha
         //holder.quantityTotal.text = currentObra.quantidadeFerramentas.toString()
 
         holder.obrasLayout.setOnClickListener {

@@ -20,4 +20,5 @@ interface ObraDao {
 
     /*@Query("UPDATE obrastable SET nomeObra = nomeObra, endereco = endereco WHERE id = id")
     suspend fun update(id : Int?, nomeObra : String?, endereco : String?)*/
+
 }

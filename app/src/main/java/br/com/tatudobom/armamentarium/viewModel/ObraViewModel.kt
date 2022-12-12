@@ -27,6 +27,7 @@ class ObraViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteObra(obra: Obra) = viewModelScope.launch(Dispatchers.IO) {
         repository.delete(obra)
     }
+
     /*fun updateObra(obra: Obra) = viewModelScope.launch(Dispatchers.IO) {
         repository.update(obra)
     }*/

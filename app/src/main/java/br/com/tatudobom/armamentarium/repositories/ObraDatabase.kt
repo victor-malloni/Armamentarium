@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import br.com.tatudobom.armamentarium.model.Obra
 import br.com.tatudobom.armamentarium.util.DATABASE_NAME
 
-@Database(entities = arrayOf(Obra::class), version = 3, exportSchema = false)
+@Database(entities = arrayOf(Obra::class), version = 4, exportSchema = false)
 abstract class ObraDatabase : RoomDatabase() {
     abstract fun getObraDao(): ObraDao
 
