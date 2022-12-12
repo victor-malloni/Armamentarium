@@ -31,6 +31,8 @@ class Constructions : Fragment(R.layout.fragment_constructions),ObraAdapter.Obra
     lateinit var adapter: ObraAdapter
     lateinit var selectedObra: Obra
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentConstructionsBinding.bind(view)
@@ -42,8 +44,7 @@ class Constructions : Fragment(R.layout.fragment_constructions),ObraAdapter.Obra
     private fun initUI() {
         binding.RecyclerView.setHasFixedSize(true)
         binding.RecyclerView.layoutManager=StaggeredGridLayoutManager(2,LinearLayout.VERTICAL)
-        adapter= ObraAdapter(this)
-        binding.RecyclerView.adapter=adapter
+        //binding.RecyclerView.adapter=adapter
 
         binding.BtnAddTools.setOnClickListener { navTo(R.id.newConstructions) }
     }

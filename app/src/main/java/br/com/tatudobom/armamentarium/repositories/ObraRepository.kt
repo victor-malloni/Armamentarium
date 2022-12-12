@@ -15,4 +15,8 @@ class ObraRepository(private val obraDao: ObraDao) {
         obraDao.delete(obra)
     }
 
+    suspend fun update(obra: Obra) {
+        obraDao.update(obra.id, obra.nomeObra, obra.endereco)
+    }
+
 }

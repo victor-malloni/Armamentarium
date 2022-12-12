@@ -11,8 +11,13 @@ import br.com.tatudobom.armamentarium.model.Obra
 interface ObraDao {
     @Insert//(onConflict = onConflictStrategy.REPLACE)
     suspend fun insert(obra: Obra)
+
     @Delete
     suspend fun delete(obra: Obra)
+
     @Query("SELECT * FROM ObrasTable ORDER BY id ASC")
-    fun getAllObras():LiveData<List<Obra>>
+    fun getAllObras(): LiveData<List<Obra>>
+
+    @Query("UPDATE obrastable SET nomeObra = nomeObra, endereco = endereco WHERE id = id")
+    suspend fun update(id : Int?, nomeObra : String?, endereco : String?)
 }

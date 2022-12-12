@@ -70,6 +70,8 @@ class ObraAdapter(
     }
 
     private val ObraLista = ArrayList<Obra>()
+    private val fullObraLista = ArrayList<Obra>()
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ObraViewHolder {
         return ObraViewHolder(
@@ -93,6 +95,15 @@ class ObraAdapter(
 
     override fun getItemCount(): Int {
         return ObraLista.size
+    }
+    fun updateList(newList: List<Obra>) {
+        fullObraLista.clear()
+        fullObraLista.addAll(newList)
+
+        ObraLista.clear()
+        ObraLista.addAll(fullObraLista)
+
+        notifyDataSetChanged()
     }
 
     interface ObraClickListener {
