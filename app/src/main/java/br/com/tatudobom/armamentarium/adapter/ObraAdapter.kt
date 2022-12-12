@@ -1,5 +1,6 @@
 package br.com.tatudobom.armamentarium.adapter
 
+import android.app.Application
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +8,12 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.recyclerview.widget.RecyclerView
 import br.com.tatudobom.armamentarium.R
 import br.com.tatudobom.armamentarium.model.Obra
+import br.com.tatudobom.armamentarium.viewModel.ObraViewModel
 import kotlinx.android.synthetic.main.list_item.view.*
 
 /*class ObraAdapter(private val items: List<Obra>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -83,7 +87,7 @@ class ObraAdapter(
             listener.onItemClicked(ObraLista[holder.adapterPosition])
         }
         holder.obrasLayout.setOnClickListener {
-            listener.onLongItemClicked(ObraLista[holder.adapterPosition],holder.obrasLayout)
+            listener.onLongItemClicked(ObraLista[holder.adapterPosition], holder.obrasLayout)
         }
     }
 

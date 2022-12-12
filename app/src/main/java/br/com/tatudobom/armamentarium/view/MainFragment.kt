@@ -22,15 +22,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding = FragmentMainBinding.bind(view)
         binding.btnSignup.setOnClickListener{navTo(R.id.signup)}
 
-
-
-
         binding.btnLogin.setOnClickListener{
             val email = binding.ETEmailAddress.text.toString()
             val password = binding.ETPassword.text.toString()
 
             funSignIn(email,password)
-
 
         }
     }

@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_constructions_to_newConstructions"
             app:destination="@id/newConstructions" />
+        <action
+            android:id="@+id/action_constructions_to_detalhesObra"
+            app:destination="@id/detalhesObra" />
     </fragment>
     <fragment
         android:id="@+id/newConstructions"
@@ -52,6 +55,14 @@
         <action
             android:id="@+id/action_createNewTool_to_newConstructions"
             app:destination="@id/newConstructions" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesObra"
+        android:name="br.com.tatudobom.armamentarium.view.DetalhesObra"
+        android:label="DetalhesObra" >
+        <action
+            android:id="@+id/action_detalhesObra_to_constructions"
+            app:destination="@id/constructions" />
     </fragment>
 
 </navigation>
