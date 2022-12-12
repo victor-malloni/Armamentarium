@@ -36,6 +36,11 @@ class NewConstructionsActivity : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        binding.btnCreateNewTool.setOnClickListener {
+            val intent = Intent(this, CreateNewToolActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.btnCheck.setOnClickListener {
             val nomeObra = binding.ETConstName.text.toString()
             val endereco = binding.ETConstEndereco.text.toString()

@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Armamentarium">
         <activity
+            android:name=".CreateNewToolActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SignUpActivity"
             android:exported="false">
             <meta-data
@@ -52,7 +59,7 @@
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
