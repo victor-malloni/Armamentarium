@@ -27,7 +27,7 @@ class RecyclerTestActivity : AppCompatActivity(), ObraAdapter.ObraClickListener 
             if (result.resultCode == Activity.RESULT_OK){
                 val obra = result.data?.getSerializableExtra("obra") as? Obra
                 if (obra != null) {
-                    viewModel.updateObra(obra)
+                    //viewModel.updateObra(obra)
                 }
             }
         }
@@ -73,7 +73,7 @@ class RecyclerTestActivity : AppCompatActivity(), ObraAdapter.ObraClickListener 
             }
 
         binding.BtnAddTools.setOnClickListener {
-            val intent = Intent(this, ObraSingleActivity::class.java)
+            val intent = Intent(this, NewConstructionsActivity::class.java)
             getContent.launch(intent)
         }
 
@@ -84,7 +84,7 @@ class RecyclerTestActivity : AppCompatActivity(), ObraAdapter.ObraClickListener 
     override fun onItemClicked(obra: Obra) {
 
         val intent = Intent(this@RecyclerTestActivity, ObraSingleActivity::class.java)
-        //intent.putExtra("currentObra", obra)
+        intent.putExtra("currentObra", obra)
         updateObra.launch(intent)
 
 

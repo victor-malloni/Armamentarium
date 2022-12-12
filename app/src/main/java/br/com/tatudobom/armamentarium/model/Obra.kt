@@ -8,8 +8,8 @@ data class Obra(
     @PrimaryKey(autoGenerate = true)val id:Int?,
     @ColumnInfo (name = "nomeObra")val nomeObra: String?,
     @ColumnInfo (name = "endereco")val endereco: String?,
-    @ColumnInfo (name = "chaveDeFenda")val chaveDeFenda: Int?,
+   /* @ColumnInfo (name = "chaveDeFenda")val chaveDeFenda: Int?,
     @ColumnInfo (name = "serraTicoTico")val serraTicoTico: Int?,
     @ColumnInfo (name = "marteloDeUnha")val marteloDeUnha: Int?,
-    @ColumnInfo (name = "quantidadeFerramentas")val quantidadeFerramentas: Int=chaveDeFenda!!+serraTicoTico!!+marteloDeUnha!!
-)
+    @ColumnInfo (name = "quantidadeFerramentas")val quantidadeFerramentas: Int=chaveDeFenda!!+serraTicoTico!!+marteloDeUnha!!*/
+):java.io.Serializable

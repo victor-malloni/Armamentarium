@@ -18,6 +18,6 @@ interface ObraDao {
     @Query("SELECT * FROM ObrasTable ORDER BY id ASC")
     fun getAllObras(): LiveData<List<Obra>>
 
-    @Query("UPDATE obrastable SET nomeObra = nomeObra, endereco = endereco WHERE id = id")
-    suspend fun update(id : Int?, nomeObra : String?, endereco : String?)
+    /*@Query("UPDATE obrastable SET nomeObra = nomeObra, endereco = endereco WHERE id = id")
+    suspend fun update(id : Int?, nomeObra : String?, endereco : String?)*/
 }
