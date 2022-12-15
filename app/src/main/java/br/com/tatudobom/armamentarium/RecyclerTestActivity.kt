@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import br.com.tatudobom.armamentarium.adapter.ObraAdapter
 import br.com.tatudobom.armamentarium.databinding.ActivityRecyclerTestBinding
@@ -59,7 +60,10 @@ class RecyclerTestActivity : AppCompatActivity(), ObraAdapter.ObraClickListener 
 
     private fun initUI() {
         binding.RecyclerView.setHasFixedSize(true)
-        binding.RecyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayout.VERTICAL)
+        //Grid layout bellow { 2 per line }
+        //binding.RecyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayout.VERTICAL)
+        //Cardview layout (Linear) { 1 per line }
+        binding.RecyclerView.layoutManager = LinearLayoutManager(this@RecyclerTestActivity)
         adapter = ObraAdapter(this, this)
         binding.RecyclerView.adapter = adapter
 
